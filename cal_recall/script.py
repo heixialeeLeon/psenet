@@ -185,13 +185,7 @@ def evaluate_method(gtFilePath, submFilePath, evaluationParams):
         sampleAP = 0;
 
         evaluationLog = ""
-
-        pointsList, _, transcriptionsList = get_tl_line_values_from_file_contents(gtFile,
-                                                                                                       evaluationParams[
-                                                                                                           'CRLF'],
-                                                                                                       evaluationParams[
-                                                                                                           'LTRB'],
-                                                                                                       True, False)
+        pointsList, _, transcriptionsList = get_tl_line_values_from_file_contents(gtFile,evaluationParams['CRLF'],evaluationParams['LTRB'],True, False)
         for n in range(len(pointsList)):
             points = pointsList[n]
             transcription = transcriptionsList[n]
@@ -213,14 +207,7 @@ def evaluate_method(gtFilePath, submFilePath, evaluationParams):
 
             detFile = subm[resFile]  # rrc_evaluation_funcs.decode_utf8(subm[resFile])
 
-            pointsList, confidencesList, _ = get_tl_line_values_from_file_contents(detFile,
-                                                                                                        evaluationParams[
-                                                                                                            'CRLF'],
-                                                                                                        evaluationParams[
-                                                                                                            'LTRB'],
-                                                                                                        False,
-                                                                                                        evaluationParams[
-                                                                                                            'CONFIDENCES'])
+            pointsList, confidencesList, _ = get_tl_line_values_from_file_contents(detFile, evaluationParams['CRLF'],evaluationParams['LTRB'],False,evaluationParams['CONFIDENCES'])
             for n in range(len(pointsList)):
                 points = pointsList[n]
 
@@ -457,12 +444,7 @@ def evaluate_method_tips(gtFilePath, submFilePath, evaluationParams):
 
         evaluationLog = ""
 
-        pointsList, _, transcriptionsList = get_tl_line_values_from_file_contents(gtFile,
-                                                                                                       evaluationParams[
-                                                                                                           'CRLF'],
-                                                                                                       evaluationParams[
-                                                                                                           'LTRB'],
-                                                                                                       True, False)
+        pointsList, _, transcriptionsList = get_tl_line_values_from_file_contents(gtFile,evaluationParams['CRLF'],evaluationParams['LTRB'],True, False)
         for n in range(len(pointsList)):
             points = pointsList[n]
             transcription = transcriptionsList[n]
@@ -484,14 +466,7 @@ def evaluate_method_tips(gtFilePath, submFilePath, evaluationParams):
 
             detFile = subm[resFile]  # rrc_evaluation_funcs.decode_utf8(subm[resFile])
 
-            pointsList, confidencesList, _ = get_tl_line_values_from_file_contents(detFile,
-                                                                                                        evaluationParams[
-                                                                                                            'CRLF'],
-                                                                                                        evaluationParams[
-                                                                                                            'LTRB'],
-                                                                                                        False,
-                                                                                                        evaluationParams[
-                                                                                                            'CONFIDENCES'])
+            pointsList, confidencesList, _ = get_tl_line_values_from_file_contents(detFile,evaluationParams['CRLF'],evaluationParams['LTRB'],False,evaluationParams['CONFIDENCES'])
             for n in range(len(pointsList)):
                 points = pointsList[n]
 

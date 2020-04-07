@@ -105,4 +105,4 @@ ENV/
 .weights/
 checkpoint/
 output/
-weights/
+result/
